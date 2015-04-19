@@ -1,3 +1,10 @@
+---
+title: "PA1_Template"
+author: "zqf"
+date: "Sunday, April 19, 2015"
+output: html_document
+---
+
 # Reproducible Research: Peer Assessment 1
 
 
@@ -24,7 +31,7 @@ sum_step<-aggregate(steps ~ date, data, sum,na.rm=T)
 hist(sum_step$steps,col=4,main="Histogram of total number of steps per day", xlab="Total number of steps in a day")
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
 
 2. Calculate and report the **mean** and **median** total number of steps taken per day
 
@@ -32,7 +39,7 @@ hist(sum_step$steps,col=4,main="Histogram of total number of steps per day", xla
 showmean<-mean(sum_step$steps)
 showmedian<-median(sum_step$steps)
 ```
-the **mean** of the total number of steps taken per day is 1.0766 &times; 10<sup>4</sup> steps
+the **mean** of the total number of steps taken per day is 1.0766189 &times; 10<sup>4</sup> steps
 the **median** of the total number of steps taken per day is 10765 steps
 
 ## What is the average daily activity pattern?
@@ -46,7 +53,7 @@ plot(avg_step$interval, avg_step$steps, type='l', col=1,
      ylab="Average number of steps")
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -93,13 +100,13 @@ imputed_step <- aggregate(steps ~ date, data, sum)
 hist(imputed_step$steps, col=4, main="(Imputed) Histogram of total number of steps per day", xlab="Total number of steps in a day")
 ```
 
-![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8.png) 
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
 
 ```r
 showmean2<-mean(sum_step$steps)
 showmedian2<-median(sum_step$steps)
 ```
-the **mean** of the total number of steps taken per day(NA replaced) is 1.0766 &times; 10<sup>4</sup> steps  
+the **mean** of the total number of steps taken per day(NA replaced) is 1.0766189 &times; 10<sup>4</sup> steps  
 the **median** of the total number of steps taken per day(NA replaced) is 10765 steps  
 The values remain the same as the value of the first part.
 
@@ -137,5 +144,4 @@ ggplot(avg, aes(x=interval,y=steps)) + geom_line(binwidth=2,col=4)+facet_wrap(~ 
         theme(strip.background = element_rect(fill="pink",colour="black"))
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
-
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 

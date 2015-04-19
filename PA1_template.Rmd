@@ -1,3 +1,10 @@
+---
+title: "PA1_Template"
+author: "zqf"
+date: "Sunday, April 19, 2015"
+output: html_document
+---
+
 # Reproducible Research: Peer Assessment 1
 
 
@@ -115,4 +122,3 @@ ggplot(avg, aes(x=interval,y=steps)) + geom_line(binwidth=2,col=4)+facet_wrap(~ 
 
 
 ```
-
