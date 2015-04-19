@@ -93,7 +93,9 @@ showmean2<-mean(sum_step$steps)
 showmedian2<-median(sum_step$steps)
 ```
 the **mean** of the total number of steps taken per day(NA replaced) is `r showmean2` steps  
+
 the **median** of the total number of steps taken per day(NA replaced) is `r showmedian2` steps  
+
 The values remain the same as the value of the first part.
 
 ## Are there differences in activity patterns between weekdays and weekends?
