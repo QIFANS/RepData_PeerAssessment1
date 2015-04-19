@@ -116,14 +116,6 @@ the dataset with the filled-in missing values for this part.
 
 
 ```r
-Sys.setlocale("LC_TIME", "American")
-```
-
-```
-## [1] "English_United States.1252"
-```
-
-```r
 data$date<-as.Date(data$date)
 data$day<-ifelse((weekdays(data$date)=="Saturday" | weekdays(data$date)== "Sunday"),
                  "weekend","weekday")

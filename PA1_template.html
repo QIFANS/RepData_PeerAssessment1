@@ -299,12 +299,6 @@ the dataset with the filled-in missing values for this part.</p>
 
 <p>1.Create a new factor variable in the dataset with two levels &ndash; &ldquo;weekday&rdquo; and &ldquo;weekend&rdquo; indicating whether a given date is a weekday or weekend day.</p>
 
-<pre><code class="r">Sys.setlocale(&quot;LC_TIME&quot;, &quot;American&quot;)
-</code></pre>
-
-<pre><code>## [1] &quot;English_United States.1252&quot;
-</code></pre>
-
 <pre><code class="r">data$date&lt;-as.Date(data$date)
 data$day&lt;-ifelse((weekdays(data$date)==&quot;Saturday&quot; | weekdays(data$date)== &quot;Sunday&quot;),
                  &quot;weekend&quot;,&quot;weekday&quot;)
